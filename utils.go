@@ -156,5 +156,5 @@ var(
 	FgMagenta="\x1b[35m"
 	FgCyan="\x1b[36m"
 	FgWhite="\x1b[37m"
-	Reset="\x1b[0m"); // reset
+	Reset="\x1b[0m" // reset
 )
