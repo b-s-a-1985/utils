@@ -147,14 +147,39 @@ func ReverseString(s string) string {
 } // ReverseString
 
 // Foreground colors
-var(
-	FgBlack="\x1b[30m"
-	FgRed="\x1b[31m"
-	FgGreen="\x1b[32m"
-	FgYellow="\x1b[33m"
-	FgBlue="\x1b[34m"
-	FgMagenta="\x1b[35m"
-	FgCyan="\x1b[36m"
-	FgWhite="\x1b[37m"
-	Reset="\x1b[0m" // reset
+// Foreground text colors
+var (
+	FgBlack   = "\x1b[30m"
+	FgRed     = "\x1b[31m"
+	FgGreen   = "\x1b[32m"
+	FgYellow  = "\x1b[33m"
+	FgBlue    = "\x1b[34m"
+	FgMagenta = "\x1b[35m"
+	FgCyan    = "\x1b[36m"
+	FgWhite   = "\x1b[37m"
+	Reset     = "\x1b[0m" // reset
+)
+
+// Bright Foreground colors
+var (
+	BrightFgBlack   = "\x1b[90m"
+	BrightFgRed     = "\x1b[91m"
+	BrightFgGreen   = "\x1b[92m"
+	BrightFgYellow  = "\x1b[93m"
+	BrightFgBlue    = "\x1b[94m"
+	BrightFgMagenta = "\x1b[95m"
+	BrightFgCyan    = "\x1b[96m"
+	BrightFgWhite   = "\x1b[97m"
+)
+
+// Foreground Colors Combined with Background Colors
+// After each color change needed reset
+var (
+	FgBlackBgGreen   = "\x1b[30m\x1b[42m" // fg: black, bg: green\x1b[0m"); // OK
+	FgBlackBgYellow  = "\x1b[30m\x1b[43m" // fg: black, bg: yellow\x1b[0m"); // OK
+	FgBlackBgCyan    = "\x1b[30m\x1b[46m" // fg: black, bg: cyan\x1b[0m"); // OK
+	FgBlackBgWhite   = "\x1b[30m\x1b[47m" // fg: black, bg: white\x1b[0m"); // OK
+	FgWhiteBgBlue    = "\x1b[37m\x1b[44m" // fg: white, bg: blue\x1b[0m"); // OK
+	FgWhiteBgMagenta = "\x1b[37m\x1b[45m" // fg: white, bg: magenta\x1b[0m"); // OK
+	FgRedBgWhite     = "\x1b[31m\x1b[47m" // fg: red, bg: white\x1b[0m"); // OK
 )
